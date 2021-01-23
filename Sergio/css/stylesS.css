@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* Style the header */
+
+.header {
+    background-image: url('../img/ThirdFearfulDamselfly-size_restricted.gif');
+    background-size: cover;
+    /*tamaño de foto*/
+    background-attachment: fixed;
+    /*fondo fijo*/
+    padding: 10% 20px;
+    text-align: center;
+    color: white;
+}
