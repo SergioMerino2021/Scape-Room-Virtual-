@@ -1,9 +1,15 @@
+
 function val_1() {
     var a = document.getElementById('val-1').value
-    
-    if (a == 'DHCP') {
+    var b = document.getElementById('val-2').value
+    if (a == 'DHCP' && b == 'DNS') {
         return true
-    } else {
+    }
+
+    if (a == 'DNS' && b == 'DHCP'){
+        return true
+    }
+    else {
         alert('FALLO DE LA RED')
         return false
     }
