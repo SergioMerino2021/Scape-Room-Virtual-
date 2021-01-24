@@ -1,14 +1,441 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+@keyframes scroll {
+    0% {
+        height: 0
+    }
+    100% {
+        height: 100%;
+    }
+}
+
 * {
     box-sizing: border-box;
-    font-family: ;
 }
 
+html,
 body {
-    max-width: 0;
+    background: black;
+    color: #00dd00;
+    font-size: 64.5%;
+    font-size: 1.4em;
+    font-family: 'VT323', Courier;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.row:after {
+h1,
+h2,
+h3 h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+p {
+    line-height: 100%;
+    margin: 0;
+}
+
+span {
+    animation: blink 1s infinite
+}
+
+ul {
+    list-style: none;
+}
+
+ul a:before,
+p a:before {
+    color: #00dd00;
+    content: ' [ ';
+}
+
+ul a:after,
+p a:after {
+    color: #00dd00;
+    content: ' ] ';
+}
+
+header.site {
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+}
+
+nav.site {
+    margin: 0 0 40px 0;
+    width: 100%;
+}
+
+nav.site ul {
+    padding: 0;
+}
+
+nav.site ul li {
+    display: inline-block;
+    padding: 0 10px;
+    min-width: 250px;
+    width: auto;
+}
+
+.overlay {
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+}
+
+.overlay:before {
+    background: linear-gradient(#101010 50%, rgba(16, 16, 16, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
+    background-size: 100% 3px, 6px 100%;
     content: "";
-    display: table;
+    display: block;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.overlay:after {
+    animation: flicker 0.30s infinite;
+    background: rgba(16, 16, 16, 0.2);
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.col {
+    float: left;
+    padding: 0 20px;
+}
+
+.col.two {
+    width: auto;
+}
+
+.wrapper {
+    animation: scroll 5s 1;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.content {
+    animation: scroll 3s 1;
+    overflow: hidden;
+    padding: 40px;
+    position: relative;
+    width: 95%;
+}
+
+#logo-v {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 200px;
+}
+
+img.pip-hero {
+    display: block;
+    float: left;
+    height: auto;
+    margin: 5px 10px 5px 0;
+    width: 120px;
+}
+
+form {}
+
+label {
+    clear: left;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+
+input[type=text],
+textarea {
+    background: transparent;
+    border: none;
+    color: #00dd00;
+    display: block;
+    float: left;
+    font-family: 'VT323', Courier;
+    font-size: 1.2em;
+    position: relative;
+    width: 80%;
+    z-index: 10
+}
+
+textarea {
+    margin-bottom: 20px overflow: auto;
+    resize: none;
+}
+
+input[type=text]:focus,
+textarea:focus,
+input[type=submit]:focus,
+a.button:focus {
+    outline: 0;
+}
+
+input[type=submit],
+a.button {
+    background: transparent;
+    border: 1px solid #00dd00;
+    clear: both;
+    color: #00dd00;
+    cursor: hand;
+    display: inline-block;
+    font-family: 'VT323', Courier;
+    font-size: 1em;
+    margin-bottom: 20px;
+    opacity: 0.25;
+    padding: 10px 100px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+input[type=submit]:hover,
+a.button:hover {
+    background: #00dd00;
+    color: #383838;
+    opacity: 0.8;
+}
+
+.expandingArea {
+    position: relative
+}
+
+.scanline {
+    animation: scroll 10s 5s infinite;
+    background: -moz-linear-gradient(top, rgba(0, 221, 0, 0) 0%, rgba(0, 221, 0, 1) 50%, rgba(0, 221, 0, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 221, 0, 0) 0%, rgba(0, 221, 0, 1) 50%, rgba(0, 221, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 221, 0, 0) 0%, rgba(0, 221, 0, 1) 50%, rgba(0, 221, 0, 0) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0000dd00', endColorstr='#0000dd00', GradientType=0);
+    display: block;
+    height: 20px;
+    opacity: 0.05;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5%;
+    z-index: 2;
+}
+
+.clear {
     clear: both;
 }
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+
+/*Icono Correo*/
+
+#linea {
+    position: fixed;
+    font-size: 55px;
+    bottom: 30px;
+    right: 30px;
+}
+
+#correo {
+    position: fixed;
+    font-size: 30px;
+    bottom: 45px;
+    right: 45px;
+}
+
+#activo {
+    position: fixed;
+    font-size: 23px;
+    bottom: 62px;
+    right: 60px;
+    z-index: 2;
+    color: red;
+}
+
+.oscurecer {
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.oscurecer.active {
+    visibility: visible;
+}
+
+.login {
+    background: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    color: black;
+    transition: 0.3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.login .cerrarlogin {
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #bbbbbb;
+    transition: .3s ease all;
+}
+
+.login .cerrarlogin:hover {
+    color: #000;
+}
+
+.login h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+
+.login h4 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0;
+}
+
+.login form .registro-input {
+    opacity: 0;
+}
+
+.login form .registro-input input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #bbbbbb;
+}
+
+.login form .iniciar-sesion {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 20px;
+    border: none;
+    color: #fff;
+    background: #2196f3;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+    opacity: 0;
+}
+
+.login form .iniciar-sesion:hover {
+    background: rgba(94, 125, 227, .9);
+}
+
+
+/*animacion login*/
+
+.login.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.login.active h3 {
+    animation: entradatitulo 1s ease .4s forwards;
+}
+
+.login.active h4 {
+    animation: entradasubtitulo 1s ease .4s forwards;
+}
+
+.login.active .registro-input {
+    animation: entradainput 1s ease 1s forwards;
+}
+
+.login.active .iniciar-sesion {
+    animation: entradalogin 1s ease 1s forwards;
+}
+
+@keyframes entradatitulo {
+    from {
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradasubtitulo {
+    from {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradainput {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes entradalogin {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 700px) {}
