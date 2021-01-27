@@ -12,14 +12,13 @@ function val_2() {
 function val_1() {
     var a = document.getElementById('val-1').value
     var b = document.getElementById('val-2').value
-    if (a == 'DHCP' && b == 'DNS') {
-        return true
-    }
 
-    if (a == 'DNS' && b == 'DHCP') {
+    if (a == 'PATO DE GOMA' && b == 'PATO DE GOMA_0') {
         return true
     } else {
-        alert('FALLO DE LA RED')
+
+        alert('INCOHERENCIA DETECTADA')
+
         return false
     }
 }

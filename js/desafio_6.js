@@ -12,14 +12,10 @@ function val_2() {
 function val_1() {
     var a = document.getElementById('val-1').value
     var b = document.getElementById('val-2').value
-    if (a == 'DHCP' && b == 'DNS') {
-        return true
-    }
 
-    if (a == 'DNS' && b == 'DHCP') {
+    if (a == 68 && b == 19032001) {
         return true
     } else {
-        alert('FALLO DE LA RED')
         return false
     }
 }
