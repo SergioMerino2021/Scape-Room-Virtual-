@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--Programador, recuerda asignar bien los privilegios al archivo de linux dónde se ven las password!-->
 <header class="site clearfix">
     <link href="../css/stylesT.css" rel="stylesheet" type="text/css">
     <link href="../css/stylesGlitch.scss" rel="stylesheet" type="text/scss">
@@ -59,33 +59,35 @@
 
             </div>
             <div class="row">
-                <div class="col_one">
-                    <h2>Codigo Interceptado:</h2>
-                    <p>
-                        01000101 01101100 00100000 01100011 01101111 01100100 01101001 01100111 01101111 00100000 01110000 01100001 01110010 01100001 00100000 01110010 01100101 01101001 01101110 01101001 01100011 01101001 01100001 01110010 00100000 01101100 01100001 01110011
-                        00100000 01100011 01100101 01101100 01100100 01100001 01110011 00100000 01100100 01100101 00100000 01101100 01100001 00100000 01100010 01100001 01110100 01100101 01110010 01101001 01100001 00100000 01100101 01110011 00111010 00100000
-                        00110110 00111000
-                    </p>
-                    <br>
-                    <p>
-                        4e656365736974617320656c20636f6469676f2064652061636365736f3a203139303332303031
-                    </p>
-                    <br>
-                    <h3>Datos recibidos de 172.24.23.254</h3>
+                <h1>Archivo importante</h1>
 
-                </div>
+                <p><a href="archivo.php?file=archivo.txt">
+                <img src="../img/Ba.png" alt="File" width="400" height="332">
+                </a></p>   
+                &nbsp;
+                 <center><form method="POST" name="<?php basename($_SERVER['PHP_SELF']); ?>">
+                    <label>Usuario: </label><input type="text" name="user" id="user" size="30">
+                    &nbsp;
+                    <label>Pass: </label><input type="text" name="pass" id="pass" size="30">
+                    &nbsp;
+                    <input type="submit" value="Insertar">
+                </form></center>
+
             </div>
 
             <div class="row">
-                <div class="col_one">
-                    <form>
-                        <label>CODIGO BATERIA >></label><input type="text" name="val-1" id="val-1"><br />
-                        <label>CODIGO USUARIO >></label><input type="text" name="val-2" id="val-2"><br />
-                        <br>
-                        <br>
-                        <center><a class="button" alt="" onclick="return val_1()" href="def7.html">RESTABLECER BATERIA</a></center>
-                    </form>
-                </div>
+                <?php
+                    $CODIGO = "sergio2001";
+                    $USER = "Sergio";
+
+                    if(isset($_POST['user']) && isset($_POST['pass'])){
+                        if($_POST['user'] == $USER){
+                            if($_POST['pass'] == $CODIGO){
+                                header('Location: def3.html');
+                            } else {echo "La password es incorrecta!";}
+                        } else {echo "El usuario es incorrecto!";}
+                    }
+                ?>
             </div>
 
 
