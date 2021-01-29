@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--Mensaje al programador: Revisa el código, puede ser vulnerable a Type Juggling!, he dejado en la pagina anterior una ayuda para que sepas de que va la vulnerabilidad-->
+
 <header class="site clearfix">
     <link href="../css/stylesT.css" rel="stylesheet" type="text/css">
     <link href="../css/stylesGlitch.scss" rel="stylesheet" type="text/scss">
@@ -33,6 +35,8 @@
 
             <div class="row">
                 <div class="aligCenter">
+                    <font color="red"><h1><marquee>Inicia sesión para acabar este scape room</h1></marquee></font>
+                    <hr>
                     <h2><i class="fal fa-server"></i> RECURSOS DEL SISTEMA <i class="fal fa-server"></i></h2>
                     <p>- NETWORK</p>
                     <p>- ARCHIVOS SISTEMA</p>
@@ -59,33 +63,41 @@
 
             </div>
             <div class="row">
-                <div class="col_one">
-                    <h2>Codigo Interceptado:</h2>
-                    <p>
-                        01000101 01101100 00100000 01100011 01101111 01100100 01101001 01100111 01101111 00100000 01110000 01100001 01110010 01100001 00100000 01110010 01100101 01101001 01101110 01101001 01100011 01101001 01100001 01110010 00100000 01101100 01100001 01110011
-                        00100000 01100011 01100101 01101100 01100100 01100001 01110011 00100000 01100100 01100101 00100000 01101100 01100001 00100000 01100010 01100001 01110100 01100101 01110010 01101001 01100001 00100000 01100101 01110011 00111010 00100000
-                        00110110 00111000
-                    </p>
-                    <br>
-                    <p>
-                        4e656365736974617320656c20636f6469676f2064652061636365736f3a203139303332303031
-                    </p>
-                    <br>
-                    <h3>Datos recibidos de 172.24.23.254</h3>
-
-                </div>
+                <center><form method="POST" name="<?php basename($_SERVER['PHP_SELF']); ?>">
+                    <label>Usuario: </label><input type="text" name="usuario" id="usuario" size="30">
+                    &nbsp;
+                    <label>Password: </label><input type="text" name="password" id="password" size="30">
+                    <input type="submit" value="Login">
+                </form></center>
             </div>
 
             <div class="row">
-                <div class="col_one">
-                    <form>
-                        <label>CODIGO BATERIA >></label><input type="text" name="val-1" id="val-1"><br />
-                        <label>CODIGO USUARIO >></label><input type="text" name="val-2" id="val-2"><br />
-                        <br>
-                        <br>
-                        <center><a class="button" alt="" onclick="return val_1()" href="def7.html">RESTABLECER BATERIA</a></center>
-                    </form>
-                </div>
+                <?php
+                $USER = "admin";
+                $PASSWORD = "3st4contraseñ43simposiblede4veriguar123__";
+
+                if(isset($_POST['usuario']) && isset($_POST['password'])){
+                    if($_POST['usuario'] == $USER){
+                        if(strcmp($_POST['password'], $PASSWORD)== 0){
+                            echo "Acceso garantizado, el PIN es 627137160";
+                        } else {echo "La password es incorrecta!";}
+                    } else {echo "El usuario es incorrecto!";}
+                }
+            ?>
+                <center><form method="POST" name="<?php basename($_SERVER['PHP_SELF']); ?>">
+                    <label>Escriba el pin que ha obtenido al loguearse correctamente: </label><input type="text" name="input" id="input" size="30">
+                    <input type="submit" value="Insertar">
+                </form></center>
+
+            <?php
+                error_reporting(0);
+
+                $CODIGO = 627137160;
+
+                if($_POST['input'] == $CODIGO){
+                    header('Location: final.html') ;
+                } else {echo "Código incorrecto";}
+            ?>
             </div>
 
 
