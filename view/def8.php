@@ -43,8 +43,8 @@
                     <p>- HARDWARE</p>
                     <p>- ARCHIVOS USUARIO</p>
                     <p>- ARCHIVOS I.A</p>
-                    <p class="yellow">- BATERIA</p>
-                    <p class="red">- PROTOCOLOS DE SEGURIDAD</p>
+                    <p>- BATERIA</p>
+                    <p>- PROTOCOLOS DE SEGURIDAD</p>
                     <p class="orange">- SERVIDOR FTP</p>
                 </div>
             </div>

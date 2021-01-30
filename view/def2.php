@@ -35,10 +35,10 @@
                 <div class="aligCenter">
                     <h2><i class="fal fa-server"></i> RECURSOS DEL SISTEMA <i class="fal fa-server"></i></h2>
                     <p>- NETWORK</p>
-                    <p>- ARCHIVOS SISTEMA</p>
-                    <p>- HARDWARE</p>
-                    <p>- ARCHIVOS USUARIO</p>
-                    <p>- ARCHIVOS I.A</p>
+                    <p class="yellow">- ARCHIVOS SISTEMA</p>
+                    <p class="yellow">- HARDWARE</p>
+                    <p class="orange">- ARCHIVOS USUARIO</p>
+                    <p class="orange">- ARCHIVOS I.A</p>
                     <p class="yellow">- BATERIA</p>
                     <p class="red">- PROTOCOLOS DE SEGURIDAD</p>
                     <p class="orange">- SERVIDOR FTP</p>
