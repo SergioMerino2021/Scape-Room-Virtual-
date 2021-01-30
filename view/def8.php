@@ -4,6 +4,7 @@
 <!--Mensaje al programador: Revisa el código, puede ser vulnerable a Type Juggling!, he dejado en la pagina anterior una ayuda para que sepas de que va la vulnerabilidad-->
 
 <header class="site clearfix">
+<link rel="icon" type="image/png" href="images/icon.png">
     <link href="../css/stylesT.css" rel="stylesheet" type="text/css">
     <link href="../css/stylesGlitch.scss" rel="stylesheet" type="text/scss">
     <link rel="stylesheet" type="text/css" href="../css/stylesGlitch.css">
