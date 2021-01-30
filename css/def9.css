@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/css?family=Voltaire);
+* {
+    font-family: "Voltaire", sans-serif;
+}
+
+html {
+    font-size: 125%;
+    line-height: 1.5em;
+}
+
+body,
+.container,
+.container::after,
+.slide::before,
+.slide::after {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+}
+
+.container {
+    background-image: url("//i.imgur.com/JjOZ3IR.png"), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9ImNpcmNsZSIgY3k9ImNsb3Nlc3QtY29ybmVyIiByPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjYjRjODk4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNjk4MjQ1Ii8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+    background-size: cover;
+    background-image: url("//i.imgur.com/JjOZ3IR.png"), radial-gradient(circle closest-corner, #b4c898 0%, #698245 100%);
+    background-size: 200vmax, contain;
+    background-position: 50%;
+    overflow: hidden;
+    perspective: 100vmax;
+    perspective-origin: 50% 50%;
+}
+
+.container::after {
+    background-image: -webkit-repeating-linear-gradient(0deg, rgba(4, 4, 4, 0) 0px, rgba(4, 4, 4, 0) 2px, rgba(4, 4, 4, 0.1) 4px, rgba(4, 4, 4, 0.1) 6px, rgba(4, 4, 4, 0) 8px);
+    background-image: repeating-linear-gradient(0deg, rgba(4, 4, 4, 0) 0px, rgba(4, 4, 4, 0) 2px, rgba(4, 4, 4, 0.1) 4px, rgba(4, 4, 4, 0.1) 6px, rgba(4, 4, 4, 0) 8px);
+    box-shadow: inset 0 0 8rem 4rem rgba(4, 4, 4, 0.75);
+    content: '';
+    display: block;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.slide {
+    -webkit-animation-name: switch-slide;
+    animation-name: switch-slide;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    border-radius: 2rem;
+    height: 100%;
+    padding: 3rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.slide::before {
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSI5OS44MzM2MSUiIHN0b3AtY29sb3I9IiNmYWZhZmEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmYWZhZmEiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI5OS44MzM2MSUiIHN0b3AtY29sb3I9IiNmYWZhZmEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmYWZhZmEiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+    background-size: 100%;
+    background-image: linear-gradient(0deg, #fafafa 6px, rgba(250, 250, 250, 0) 6.01px), linear-gradient(90deg, #fafafa 6px, rgba(250, 250, 250, 0) 6.01px);
+    background-size: 13.33vmax 13.33vmax;
+    background-position: 50%;
+    content: '';
+    display: block;
+    opacity: .2;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.slide::after {
+    box-shadow: inset 0 0 0 1rem #040404, inset 0 0 2rem 1rem #040404;
+    background-image: url("//i.imgur.com/nsO9SX4.png");
+    border-radius: 3rem;
+    content: '';
+    display: block;
+    pointer-events: none;
+}
+
+.defocus {
+    -webkit-animation-duration: 5s, 5s;
+    animation-duration: 5s, 5s;
+    -webkit-animation-name: switch-slide, defocus-slide;
+    animation-name: switch-slide, defocus-slide;
+    -webkit-animation-timing-function: ease-in-out, ease-out;
+    animation-timing-function: ease-in-out, ease-out;
+}
+
+.title {
+    font-size: 40px;
+    font-size: 2rem;
+    line-height: 60px;
+    line-height: 3rem;
+    margin: 5vw auto 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.icon {
+    max-width: 33vmin;
+}
+
+@media (max-width: 1024px) {
+    .container::after {
+        box-shadow: inset 0 0 4rem 2rem rgba(4, 4, 4, 0.75);
+    }
+}
+
+@media (min-width: 1025px) {
+    .title {
+        font-size: 60px;
+        font-size: 3rem;
+        line-height: 90px;
+        line-height: 4.5rem;
+        margin: 22vmin auto 0;
+    }
+}
+
+@-webkit-keyframes switch-slide {
+    0% {
+        transform: translate3d(0, 100%, 5rem);
+    }
+    10% {
+        transform: translate3d(0, 67%, 0rem);
+    }
+    20% {
+        transform: translate3d(0, 0%, 0rem);
+    }
+    80% {
+        transform: translate3d(0, 0%, 0rem);
+    }
+    90% {
+        transform: translate3d(0, -67%, -5rem);
+    }
+    100% {
+        transform: translate3d(0, -100%, 5rem);
+    }
+}
+
+@keyframes switch-slide {
+    0% {
+        transform: translate3d(0, 100%, 5rem);
+    }
+    10% {
+        transform: translate3d(0, 67%, 0rem);
+    }
+    20% {
+        transform: translate3d(0, 0%, 0rem);
+    }
+    80% {
+        transform: translate3d(0, 0%, 0rem);
+    }
+    90% {
+        transform: translate3d(0, -67%, -5rem);
+    }
+    100% {
+        transform: translate3d(0, -100%, 5rem);
+    }
+}
+
+@-webkit-keyframes defocus-slide {
+    10% {
+        filter: blur(6px);
+    }
+    18% {
+        filter: blur(6px);
+    }
+    28% {
+        filter: blur(0px);
+    }
+    72% {
+        filter: blur(0px);
+    }
+    82% {
+        filter: blur(6px);
+    }
+}
+
+@keyframes defocus-slide {
+    10% {
+        filter: blur(6px);
+    }
+    18% {
+        filter: blur(6px);
+    }
+    28% {
+        filter: blur(0px);
+    }
+    72% {
+        filter: blur(0px);
+    }
+    82% {
+        filter: blur(6px);
+    }
+}
