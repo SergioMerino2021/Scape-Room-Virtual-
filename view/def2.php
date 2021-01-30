@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/stylesGlitch.css">
     <script src="../js/desafio_6.js"></script>
     <script src="../js/pryueba.js"></script>
+    <link rel="icon" type="image/png" href="../img/logo.png">
 </header>
 
 <body>
