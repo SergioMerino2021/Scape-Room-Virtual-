@@ -14,8 +14,10 @@ function val_1() {
     var b = document.getElementById('val-2').value
 
     if (a == 68 && b == 19032001) {
+
         return true
     } else {
+        alert('FUGA DETECTADA')
         return false
     }
 }
