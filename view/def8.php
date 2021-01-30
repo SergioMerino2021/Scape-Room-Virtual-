@@ -21,8 +21,8 @@
             <img src="../img/Atlas_White_on_Black_Logo.png" alt="Atlas" width="740" height="729" id="logo-v" />
         </div>
         <div class="col two">
-            <h4>ATLAS Corp <br /> <b>H</b>euristically <b>E</b>ncrypted <b>R</b>eal-Time <b>O</b>perating <b>S</b>ystem (HEROS)</h4>
-            <p>----------------------------------------------------------</p>
+            <h4><u>ATLAS Corp <br /> <b>H</b>euristically <b>E</b>ncrypted <b>R</b>eal-Time <b>O</b>perating <b>S</b>ystem (HEROS)</u></h4>
+            
             <p>HEROS v 1.1.2</p>
             <p>(c)2001-2002 ATLAS Corp</p>
             <p>- Server APACHE -</p>
