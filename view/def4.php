@@ -2,6 +2,7 @@
 <html lang="en">
 
 <header class="site clearfix">
+    <title>TERMINAL A12</title>
     <link href="../css/stylesT.css" rel="stylesheet" type="text/css">
     <link href="../css/stylesGlitch.scss" rel="stylesheet" type="text/scss">
     <link rel="stylesheet" type="text/css" href="../css/stylesGlitch.css">
