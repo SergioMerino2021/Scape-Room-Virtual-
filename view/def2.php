@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Programador, recuerda asignar bien los privilegios al archivo de linux dónde se ven las password!-->
-<header class="site clearfix">
+<head class="site clearfix">
+    <meta charset="utf-8">
     <title>TERMINAL A12</title>
     <link href="../css/stylesT.css" rel="stylesheet" type="text/css">
     <link href="../css/stylesGlitch.scss" rel="stylesheet" type="text/scss">
@@ -9,7 +10,7 @@
     <script src="../js/desafio_6.js"></script>
     <script src="../js/pryueba.js"></script>
     <link rel="icon" type="image/png" href="../img/logo.png">
-</header>
+</head>
 
 <body>
     <div class="row">

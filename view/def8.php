@@ -3,7 +3,8 @@
 
 <!--Mensaje al programador: Revisa el código, puede ser vulnerable a Type Juggling!, he dejado en la pagina anterior una ayuda para que sepas de que va la vulnerabilidad-->
 
-<header class="site clearfix">
+<head class="site clearfix">
+    <meta charset="utf-8">
     <title>TERMINAL A12</title>
     <link rel="icon" type="image/png" href="../img/logo.png">
     <link href="../css/stylesT.css" rel="stylesheet" type="text/css">
@@ -11,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../css/stylesGlitch.css">
     <script src="../js/desafio_6.js"></script>
     <script src="../js/pryueba.js"></script>
-</header>
+</head>
 
 <body>
     <div class="row">
